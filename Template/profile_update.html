@@ -1,0 +1,9 @@
+<div style="display: flex;justify-content: center;">
+    <form method="post">
+        <h2>Update Profile</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+        <p><a href="{% url 'home' %}">Back to Home</a></p>
+    </form>
+</div>

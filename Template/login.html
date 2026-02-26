@@ -1,0 +1,13 @@
+
+<div style="display: flex;justify-content: center;align-items: center;height: 80vh;">
+    <div style="border: 3px solid black;padding: 20px;">
+        <h2 style="text-align: center;">LOGIN</h2>
+        <form method="post">
+            {% csrf_token%}
+            {{form.as_p}}
+            <button type="submit">Login</button>
+        </form>
+        <button type="submit"><a href="{% url 'signup' %}"> SignUp </a></button>
+
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div style="display: flex;justify-content: center;align-items: center;height: 80vh;">
+    <div>
+    <h1>Welcome back {{ user.username }}</h1>
+    <form method="post" action="{% url 'logout' %}"> 
+        {% csrf_token %}
+        <button style="width: auto; height: 30px;background-color: red;margin-left: 30%;" type="submit">LOGOUT</button><br><br>
+        <p style="display:inline;padding: 25px;" ><a href="{% url 'update_profile' %}">Update Profile</a></p>
+        <a href="{% url 'todo-list' %}" class="btn-add">Add Task (API)</a>
+
+    </form>
+    </div>
+</div>
